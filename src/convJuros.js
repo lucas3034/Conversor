@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
-import './App.css';
 
 
 //Convertor Simples
@@ -16,9 +15,7 @@ function convertToAnualSimples(valormensalSimples) {
 
 function ConverterInput({ label, valor, onChange }) {
   return (
-    <div>
-
-    
+    <>
       <label labelfor={label}>{label}</label>
       <input
         id={label}
@@ -27,7 +24,7 @@ function ConverterInput({ label, valor, onChange }) {
         value={valor}
         onChange={onChange}
       />
-    </div>
+    </>
   );
   
 }
@@ -118,8 +115,8 @@ export function Main(){
   <br />
   <Simples/>
   <br/>
-  <br/>
   <hr />
+  <br/>
   <br />
   <Composto/>
   </div>
