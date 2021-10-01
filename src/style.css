@@ -1,0 +1,194 @@
+p{
+    color: #2F4F4F;
+    font-size: 20px;
+    font-family: arial;
+    text-shadow: 2px 2x 1px #111111;
+}
+
+body{
+    background-color:#000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #35b8b0;
+    height: 100px;
+    padding: 20px;
+    position: relative
+}
+
+footer{
+    
+    background-color: #35b8b0;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+button {
+    border: 2px solid #35b8b0;
+    border-radius: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #4F4F4F;
+    border-color: #35b8b0;
+    text-decoration: none;
+    text-shadow: 1px 1px #111111;
+    color: #00BFFF;
+    position: center;
+    top: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+disabled {
+    border: 2px solid #35b8b0;
+    border-radius: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #4F4F4F;
+    border-color: #35b8b0;
+    text-decoration: none;
+    text-shadow: 1px 1px #111111;
+    color: #00BFFF;
+    position: relative;
+    top: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+h1{
+    color:black;
+    text-shadow: 1px 1px 1px #111111;
+    text-align: center;
+    margin:0 0 50px;
+}
+
+#principal{
+    background-image: url('fundo.jpg');
+    background-size: 100%;
+    min-height: 400px;
+    padding: 80px 0 0 0;
+}
+
+#logo{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    float: right;
+    right: 1310px;
+    bottom: 140px;
+}
+
+#menu{
+    margin: top 10px;
+    float: left;
+}
+#menu a{
+    border-width: small;
+    border-style: solid;
+    border-color: #35b8b0;
+    padding: 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px #111111;
+    color: #111;
+    position: relative;
+    top: 15px;
+}
+
+#menu b{
+    border-width: small;
+    border-style: solid;
+    border-color: #35b8b0;
+    padding: 5px;
+    text-decoration: none;
+   /* text-shadow: 1px 1px #111111;
+    background-color: #E6E6FA;*/
+    color: #00008B;
+    position: relative;
+    top: 15px;
+}
+
+#menu a:hover{
+    background-color:#363636	;
+    color:#35b8b0;
+}
+
+#menu button:hover{
+    background-color:#C0C0C0	;
+    color:#191970;
+}
+
+.button:active {
+    background-color: #4F4F4F;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+/*#menu b:hover{
+    background-color:#111111;
+    color:#00008B;
+}*/
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.efeito{
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 50px 0 110px 0;
+}
+
+.linha-vertical {
+    height: 500px;/*Altura da linha*/
+    border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+}
+
+
+.containerCentro1 {
+    float: left;
+    position: relative;
+    left: 50%;  
+}
+
+.containerCentro2 {
+    float: left;
+    position: relative;
+    left: -50%;   
+}
+
+.esq{
+    float: left;
+    position: relative;
+}
+
+.barra1{
+    left: 100px;
+    float: bottom;
+}
+.barra2{
+    float: top;
+    right: 100px;
+    position: absolute;
+}
+.dir{
+    float: right;
+    position: relative;
+}
