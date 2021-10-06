@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { render } from "react-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Table from '@mui/material/Table';
+import Table from 'react-bootstrap/Table'
+import './style.css';
 
 
 function Row({ index, value }) {
@@ -64,6 +65,8 @@ export function CompoundInterest() {
           type="number"
           onChange={(e) => setMonths(e.target.value)}
         />
+
+
         <br />
         <br />
         <Button
@@ -75,35 +78,39 @@ export function CompoundInterest() {
         >
           Calculate
         </Button>
+
+
         <br />
         <br />
         <div style={{ fontSize: "30px" }}>{result}</div>
       </form>
       <div class="container">
-        <br/>
-        <br/>
-      <Table>
-        <thead>
-          <tr>
-            <th> </th>
-            <th> </th>
-          </tr>
-        </thead>
-        <tbody>
-          {table.map((element, index) => {
-            return (
-              <tr key={index}>
-                <td>
-                  {index + 1}
-                </td>
-                <td>
-                  {element}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+        <br />
+        <br />
+        <Table stripped bordered hover variant="dark" size="sm">
+          <thead>
+            <tr>
+              <th>Months</th>
+              <th>Interests</th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+            {table.map((element, index) => {
+              return (
+                <tr key={index}>
+                  <td>
+                    {index + 1}
+                  </td>
+                  <td>
+                    {element}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
       </div>
     </div>
   );

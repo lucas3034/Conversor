@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import { Simples, Composto, Main } from './convJuros.js';
+import { Simple, Compound, Main } from './convJuros.js';
 import { CompoundInterest } from './jurosComp.js';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/';
+import Table from '@mui/material/Table';
+import 'bootstrap/dist/css/bootstrap.css';
+//import Table from 'react-bootstrap/Table'
 
 export function Component0() {
   return (
@@ -17,7 +20,7 @@ export function Component0() {
 export function Component1() {
   return (
     <div>
-      <Main/>
+      <Main />
     </div>
   );
 }
@@ -25,7 +28,7 @@ export function Component1() {
 export function Component2() {
   return (
     <div>
-      <CompoundInterest/>
+      <CompoundInterest />
     </div>
   );
 }
@@ -41,8 +44,8 @@ export default function Home() {
           <img src="logo.png" alt="texto" height="400" width="400" />
         </div>
       </header>
-      <div class="containerCentro1">
-        <div class="containerCentro2">
+      <div class="containerCenter1">
+        <div class="containerCenter2">
           <div id="menu">
 
             <div className="App">
@@ -55,7 +58,7 @@ export default function Home() {
       </div>
       <div id="principal">
 
-        <div class="efeito">
+        <div class="effect">
 
           <div class="container">
 
