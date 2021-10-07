@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# What is this Project
+This is project is an interest converter, as simple as compound. It was created with the prototype of me studying React. To create it, in addition to React itself, I needed to learn and use CSS and HTML. It is only necessary to have the project downloaded to be able to run it.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started
 
-## Available Scripts
+To start, use the "yarn start", and choose your converter, after that put the values ​​in the bars, and in the case of the composite converter, click on the "Calculate" button.
 
-In the project rightectory, you can run:
+# Gherkin
 
-### `yarn start`
+*Features*
+Functionality: Interest Converter
+ As someone who wants to calculate the result
+ from monthly to annual interest, or vice versa,
+ both composite and simple, to access
+ to these values
+.
+Context:
+1. Since the user has the program downloaded and opens it with "yarn start"
+.
+Scenario: Simple Converter
+1. And choose the Interest Converter
+2. When he declares the values ​​in any bar
+3. Then He will see the results
+.
+.
+*Features*
+Functionality: Compound Interest Converter
+ As someone who wants to calculate the result
+ monthly interest rates over the months,
+ to access these values.
+.
+Context:
+1. Since the user has the program downloaded and opens it with "yarn start"
+.
+Scenario: Composite Converter
+1. And choose the Compound Interest Converter
+2. When he declares the values ​​in in the bars
+3. And he hit the "calculate" button
+4. Then He will see the results
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# My Github
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

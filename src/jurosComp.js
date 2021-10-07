@@ -1,23 +1,8 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Table from 'react-bootstrap/Table'
 import './style.css';
-
-
-function Row({ index, value }) {
-  return (
-    <tr>
-      <td>
-        {index + 1}
-      </td>
-      <td>
-        {value}
-      </td>
-    </tr>
-  );
-}
 
 function generator(months, interest, initial) {
   let rounds = 0;
@@ -34,7 +19,7 @@ export function CompoundInterest() {
   const [initial, setInitial] = useState();
   const [months, setMonths] = useState();
   const [interest, setInterest] = useState();
-  const [result, setResult] = useState();
+  const [result] = useState();
   const [table, setTable] = useState([]);
 
   const calculate = () => {

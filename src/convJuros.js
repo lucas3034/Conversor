@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 import './style.css';
 
 
-//Convertor Simple
+//Simple Convertor
 
 
 function convertToMonthlySimple(annualValueSimple) {
@@ -30,11 +29,9 @@ function ConverterInput({ label, amount, onChange }) {
 
 }
 
-
 export function Simple() {
 
   const [monthlySimple, setMonthlySimple] = useState(0);
-  const [annualSimple, setAnnualSimple] = useState(0);
 
   const onChange = (evt) => {
     const value = parseFloat(evt.target.value) || 0;
@@ -64,7 +61,7 @@ export function Simple() {
   );
 }
 
-//Convertor Compound
+//Compound Convertor
 
 function convertToMonthlyCompound(annualValueCompound) {
   const total = ((1 + (annualValueCompound / 100)) ** (1 / 12) - 1) * 100;

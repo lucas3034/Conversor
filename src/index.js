@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import { Simple, Compound, Main } from './convJuros.js';
+import { Main } from './convJuros.js';
 import { CompoundInterest } from './jurosComp.js';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/';
-import Table from '@mui/material/Table';
 import 'bootstrap/dist/css/bootstrap.css';
-//import Table from 'react-bootstrap/Table'
 
-export function Component0() {
+
+export function NoConvertorSelected() {
   return (
     <p>
       Choose Your Convertor
@@ -17,7 +14,7 @@ export function Component0() {
   );
 }
 
-export function Component1() {
+export function InterestSelected() {
   return (
     <div>
       <Main />
@@ -25,7 +22,7 @@ export function Component1() {
   );
 }
 
-export function Component2() {
+export function CompoundInterestSelected() {
   return (
     <div>
       <CompoundInterest />
@@ -64,13 +61,13 @@ export default function Home() {
 
             <div>
               {comp2Render === 1 && (
-                <Component1 />
+                <InterestSelected />
               )}
               {comp2Render === 2 && (
-                <Component2 />
+                <CompoundInterestSelected />
               )}
               {comp2Render === 0 && (
-                <Component0 />
+                <NoConvertorSelected />
               )}
             </div>
 
