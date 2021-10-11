@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import { propTypes } from 'react-bootstrap/esm/Image';
 import './style.css';
 
-
-//Simple Convertor
-
+// Simple Convertor
 
 function convertToMonthlySimple(annualValueSimple) {
   return (annualValueSimple / 12);
@@ -16,21 +15,34 @@ function convertToAnnualSimple(monthlyValueSimple) {
 function ConverterInput({ label, amount, onChange }) {
   return (
     <>
-      <label labelfor={label}>{label}</label>
-      <input
-        id={label}
-        name={label}
-        type="number"
-        value={amount}
-        onChange={onChange}
-      />
+      <label labelfor={label}>
+        <input
+          id={label}
+          name={label}
+          type="number"
+          value={amount}
+          onChange={onChange}
+        />
+        {label}
+
+      </label>
     </>
   );
-
 }
 
-export function Simple() {
+ConverterInput.propTypes = {
+  label: propTypes.number,
+  amount: propTypes.number,
+  onChange: propTypes.number,
+};
 
+ConverterInput.defaultProps = {
+  label: 1,
+  amount: 2,
+  onChange: 5,
+};
+
+export function Simple() {
   const [monthlySimple, setMonthlySimple] = useState(0);
 
   const onChange = (evt) => {
@@ -41,7 +53,7 @@ export function Simple() {
     } else if (evt.target.name === ' Simple Annual Interest  ') {
       setMonthlySimple(convertToMonthlySimple(value));
     }
-  }
+  };
 
   return (
     <div className="bar1">
@@ -61,21 +73,20 @@ export function Simple() {
   );
 }
 
-//Compound Convertor
+// Compound Convertor
 
 function convertToMonthlyCompound(annualValueCompound) {
   const total = ((1 + (annualValueCompound / 100)) ** (1 / 12) - 1) * 100;
-  return total; //.toFixed(2);
+  return total; // .toFixed(2);
 }
 
 function convertToAnnualCompound(monthlyValueCompound) {
   const total2 = ((1 + (monthlyValueCompound / 100)) ** 12 - 1) * 100;
-  return total2; //.toFixed(2);
+  return total2; // .toFixed(2);
 }
 
 export function Compound() {
   const [monthlyCompound, setMonthlyCompound] = useState(0);
-  const [annualCompound, setAnnualCompound] = useState(0);
 
   const onChange = (evt) => {
     const value = parseFloat(evt.target.value) || 0;
@@ -85,7 +96,7 @@ export function Compound() {
     } else if (evt.target.name === ' Compound Annual Interest ') {
       setMonthlyCompound(convertToMonthlyCompound(value));
     }
-  }
+  };
 
   return (
     <div className="bar1">

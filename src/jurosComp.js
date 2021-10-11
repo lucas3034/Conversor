@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap/Table';
 import './style.css';
 
 function generator(months, interest, initial) {
   let rounds = 0;
-  const list = []
+  const list = [];
+  let valor = initial;
   while (rounds < months) {
-    initial = initial + (initial * interest / 100)
-    list.push(initial)
-    rounds++;
+    valor += (valor * interest) / 100;
+    list.push(valor);
+    rounds += 1;
   }
   return list;
 }
 
-export function CompoundInterest() {
+function CompoundInterest() {
   const [initial, setInitial] = useState();
   const [months, setMonths] = useState();
   const [interest, setInterest] = useState();
@@ -51,7 +52,6 @@ export function CompoundInterest() {
           onChange={(e) => setMonths(e.target.value)}
         />
 
-
         <br />
         <br />
         <Button
@@ -64,12 +64,11 @@ export function CompoundInterest() {
           Calculate
         </Button>
 
-
         <br />
         <br />
-        <div style={{ fontSize: "30px" }}>{result}</div>
+        <div style={{ fontSize: '30px' }}>{result}</div>
       </form>
-      <div class="container">
+      <div className="container">
         <br />
         <br />
         <Table stripped bordered hover variant="dark" size="sm">
@@ -80,23 +79,21 @@ export function CompoundInterest() {
             </tr>
           </thead>
 
-
           <tbody>
-            {table.map((element, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    {index + 1}
-                  </td>
-                  <td>
-                    {element}
-                  </td>
-                </tr>
-              );
-            })}
+            {table.map((element, KeyId) => (
+              <tr key={KeyId.id}>
+                <td>
+                  {KeyId + 1}
+                </td>
+                <td>
+                  {element}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </div>
     </div>
   );
-};
+}
+export { CompoundInterest as default };

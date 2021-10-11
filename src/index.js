@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import { Main } from './convJuros.js';
-import { CompoundInterest } from './jurosComp.js';
+import { Main } from './convJuros';
+import CompoundInterest from './jurosComp';
 import 'bootstrap/dist/css/bootstrap.css';
-
 
 export function NoConvertorSelected() {
   return (
@@ -36,18 +35,18 @@ export default function Home() {
   return (
     <div>
       <header>
-        <div class="container" />
+        <div className="container" />
         <div id="logo">
           <img src="logo.png" alt="texto" height="400" width="400" />
         </div>
       </header>
-      <div class="containerCenter1">
-        <div class="containerCenter2">
+      <div className="containerCenter1">
+        <div className="containerCenter2">
           <div id="menu">
 
             <div className="App">
-              <button onClick={() => setComp2Render(1)}>Interest Converter</button>
-              <button onClick={() => setComp2Render(2)}>Compound Interest Converter</button>
+              <button type="button" onClick={() => setComp2Render(1)}>Interest Converter</button>
+              <button type="button" onClick={() => setComp2Render(2)}>Compound Interest Converter</button>
             </div>
 
           </div>
@@ -55,9 +54,9 @@ export default function Home() {
       </div>
       <div id="principal">
 
-        <div class="effect">
+        <div className="effect">
 
-          <div class="container">
+          <div className="container">
 
             <div>
               {comp2Render === 1 && (
@@ -76,9 +75,7 @@ export default function Home() {
       </div>
       <footer>Developed by Lucas Marinho</footer>
     </div>
-  )
+  );
 }
-
-
 
 render(<Home />, document.getElementById('root'));
